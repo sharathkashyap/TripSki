@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,7 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule} from '@angular/material'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -22,8 +23,8 @@ import { MatGridListModule} from '@angular/material'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    LeafletModule.forRoot()
-   
+    LeafletModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { icon, latLng, marker, polyline, tileLayer } from 'leaflet';
+import { HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'app-map-screen',
@@ -8,7 +9,8 @@ import { icon, latLng, marker, polyline, tileLayer } from 'leaflet';
 })
 export class MapScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpRet: HttpClient) { }
+
   streetMaps: any;
   wMaps:any;
   summit:any;
@@ -16,6 +18,8 @@ export class MapScreenComponent implements OnInit {
   route:any;
   layersControl:any;
   options:any;
+  resultList:Object;
+  
 
   private decodePoly(encoded:string):any {
 		encoded = "u}~mAy}dyMi@kACK?GL]BEtA?RPbBeA?CAC?GFKJGL?@@FUFYm@]e@YW[u@]AAACXeAPORWXgBDy@Cs@CYc@gB?[Ry@EGAG?KJOFAJiB?SCkABi@aBy@aAa@YIy@QyEiAeEeAUIFQkLsCUGOEw@MeAOqFo@Kt@";
@@ -49,6 +53,12 @@ export class MapScreenComponent implements OnInit {
   	}
   	return points;
 }
+
+  private getFourSqrData():any{
+    this.resultList = this.httpRet.get("https://api.foursquare.com/v2/venues/search?client_id=DEXG5TFSZ5VGHF03KKOFNZX5TFT0IHUX02RS1WUCFTAS1DPQ&client_secret=KPK0AWAK2QXRJWMHTLVAT5FAL0H20E5TWY3RP3ZICHGFQME3&v=20130815&ll=17.416471,78.438247&query=organic");
+    
+    console.log(this.resultList);
+  }
 
   ngOnInit() {
    this.streetMaps = tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -93,10 +103,13 @@ export class MapScreenComponent implements OnInit {
     	layers: [ this.streetMaps, this.route, this.summit, this.paradise ],
     	zoom: 7,
     	center: latLng([ 12.943260,77.690619 ])
-  	};
+    };
+    
+    this.getFourSqrData();
   }
 
 
+  
 
 
 
