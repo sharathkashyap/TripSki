@@ -9,8 +9,15 @@ import { icon, latLng, marker, polyline, tileLayer } from 'leaflet';
 export class MapScreenComponent implements OnInit {
 
   constructor() { }
+  streetMaps: any;
+  wMaps:any;
+  summit:any;
+  paradise:any;
+  route:any;
+  layersControl:any;
+  options:any;
 
-  private List<> decodePoly(String encoded) {
+  private decodePoly(encoded:string):any {
 		encoded = "u}~mAy}dyMi@kACK?GL]BEtA?RPbBeA?CAC?GFKJGL?@@FUFYm@]e@YW[u@]AAACXeAPORWXgBDy@Cs@CYc@gB?[Ry@EGAG?KJOFAJiB?SCkABi@aBy@aAa@YIy@QyEiAeEeAUIFQkLsCUGOEw@MeAOqFo@Kt@";
     	var points=[ ]
     var index = 0, len = encoded.length;
@@ -69,7 +76,7 @@ export class MapScreenComponent implements OnInit {
       shadowUrl: 'leaflet/marker-shadow.png'
     })
   });
-  	this.route = polyline([this.decodePoly("")]);
+  	this.route = polyline(this.decodePoly(""));
   //Layers control object with our two base layers and the three overlay layers
   this.layersControl = {
     baseLayers: {
