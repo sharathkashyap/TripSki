@@ -19,9 +19,11 @@ export class MapScreenComponent implements OnInit {
   route: any;
   layersControl: any;
   options: any;
-  resultList: Object;
+  resultList: any;
   mapToDisplay: Object;
   markers: Layer[] = [];
+  CLIENT_ID="KZNWNI5VO2IZU0A2PX1YEKMBJQPTRPDMMULMAXGUWV33YK4D";
+  CLIENT_SECRET="5AXIL41M1U0RMXCLGPVTCUZWS1I1SE03QQFT43YZOROD2X3I";
 
 /**
  * 
@@ -64,53 +66,49 @@ export class MapScreenComponent implements OnInit {
  */
   private getFourSqrData() {
     console.log(L);
-    this.httpRet.get("https://api.foursquare.com/v2/venues/search?client_id=DEXG5TFSZ5VGHF03KKOFNZX5TFT0IHUX02RS1WUCFTAS1DPQ&client_secret=KPK0AWAK2QXRJWMHTLVAT5FAL0H20E5TWY3RP3ZICHGFQME3&v=20130815&ll=17.416471,78.438247&query=organic").subscribe((resultList:Object) => this.processJsonList(resultList));
-    console.log(this.resultList);
+    this.httpRet.get("https://api.foursquare.com/v2/venues/search?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v=20130815&ll=17.416471,78.438247&query=restuarant").subscribe((resultListToDisplay:Object) => this.processJsonList(resultListToDisplay));   
   }
 
-  processJsonList(resultList: any) {    
-    console.log(resultList);
-    if(resultList.response!=null) {
-      var venues = resultList.response.venues;
-      for(var i=0;i<venues.length;i++) {
-        var venue = venues[i];
-        this.markers.push(this.convertVenueToGeoJson(venue));
-      }
-    }
-    console.log(this.markers);
-    console.log(L);
-    var geojsonMarkerOptions = {
-      radius: 8,
-      fillColor: "#ff7800",
-      color: "#000",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.8
-    };    
+  private fetchFourSquareImages(venueId,venue) {
+    var version="20180802"
+    this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));   
   }
 
-  convertVenueToGeoJson(venue: any) {
+  private processImageList(result,venueId,venue) {
+    this.convertVenueToGeoJson(venue,result);
+    
+  }
+
+  private convertVenueToGeoJson(venue,photoResponse) {
     var location = venue.location;
-    var category = venue.categories[0].name;
-    if(location.lat!=null && location.lng!=null) {
-     /* var markerToDisplay = marker([location.lat, location.lng], {
-        icon: icon({
-          iconSize: [25, 41],
-          iconAnchor: [13, 41],
-          iconUrl: 'assets/Icons/Cafe/images4.jpg',
-          shadowUrl: 'leaflet/marker-shadow.png'
-        })
-      });     */
+    var category = venue.categories[0];
+    var imgSrc = photoResponse.response.photos.count > 0?photoResponse.response.photos.items[0].prefix+"100"+photoResponse.response.photos.items[0].suffix:category.icon.prefix+"64"+category.icon.suffix;
+    if(location.lat!=null && location.lng!=null) {    
       var markerToDisplay = marker([location.lat, location.lng],{
         icon:  new L.DivIcon({
           className: 'my-div-icon',
-          html: '<img class="my-div-image" src="http://png-3.vector.me/files/images/4/0/402272/aiga_air_transportation_bg_thumb"/>'+
-                '<span class="my-div-span">RAF Banff Airfield</span>'
+          html: '<img class="my-div-image" id="'+venue.id+'" src="'+imgSrc+'">'+
+          '<div class="imageHolder">'+
+          '<span class="my-div-span">'+venue.name+'</span>'+
+          '</div>'
           })
       });
-      return markerToDisplay;
+      this.markers.push(markerToDisplay);
     }
   }
+
+  processJsonList(resultListToDisplay: any) {       
+    this.resultList = resultListToDisplay;
+    if(this.resultList.response!=null) {
+      var venues = this.resultList.response.venues;
+      for(var i=0;i<1;i++) {
+        var venue = venues[i];
+        this.fetchFourSquareImages(venue.id,venue);
+      }
+    }
+  }
+
+  
 /**
  * 
  */
