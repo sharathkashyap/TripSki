@@ -1,1 +1,38 @@
-Booking Component
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Best Western Hotel</mat-card-title>
+      <mat-card-subtitle>5* Hotel</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/Icons/SightSeeing/arc.jpg" alt="Hotel">
+    <mat-card-content>
+      <p>
+  
+      </p>
+    </mat-card-content>
+  
+  </mat-card>
+<br><br>
+<div class="row">
+<mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker><br><br>
+  
+
+      <div>
+        <mat-select [(ngModel)]="selected2" placeholder="Adults No.">
+          <mat-option *ngFor="let option of options2" [value]="option.id">{{ option.name }}</mat-option>
+        </mat-select>
+      </div>
+  
+        
+    
+  </mat-form-field>
+  
+  <div class="button-row">
+    <button mat-raised-button color="primary">Check Availability</button>
+    
+  </div>
+
+  </div>

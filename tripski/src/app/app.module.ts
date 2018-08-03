@@ -10,6 +10,14 @@ import { BookingComponent } from './components/booking/booking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule, MatButtonModule, MatIconModule} from '@angular/material'
 import { HttpClientModule } from '@angular/common/http'
+import {MatDatepickerModule,MatNativeDateModule} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 @NgModule({
@@ -27,7 +35,15 @@ import { HttpClientModule } from '@angular/common/http'
     LeafletModule.forRoot(),
     HttpClientModule,
     MatButtonModule, 
-    MatIconModule
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatSelectModule,
+    MatDividerModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

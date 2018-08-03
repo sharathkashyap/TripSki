@@ -1,1 +1,362 @@
-{"meta":{"code":200,"requestId":"5b643e6a351e3d7b3c2b36e0"},"response":{"venues":[{"id":"5177bda8498e9da00d80edc9","name":"Centre des monuments nationaux (CMN)","contact":{},"location":{"address":"62 rue Saint-Antoine","lat":48.85443111981487,"lng":2.363646021385723,"labeledLatLngs":[{"label":"display","lat":48.85443111981487,"lng":2.363646021385723}],"distance":3936,"postalCode":"75004","cc":"FR","city":"Paris","state":"Île-de-France","country":"France","formattedAddress":["62 rue Saint-Antoine","75004 Paris","France"]},"categories":[{"id":"4bf58dd8d48988d124941735","name":"Office","pluralName":"Offices","shortName":"Office","icon":{"prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/default_","suffix":".png"},"primary":true}],"verified":false,"stats":{"tipCount":0,"usersCount":0,"checkinsCount":0,"visitsCount":0},"beenHere":{"count":0,"lastCheckinExpiredAt":0,"marked":false,"unconfirmedCount":0},"hereNow":{"count":0,"summary":"Nobody here","groups":[]},"referralId":"v-1533296234","venueChains":[],"hasPerk":false},{"id":"4ca47d7d1ee76dcb31e601de","name":"Centre Des Monuments Nationaux","contact":{},"location":{"address":"rue de paris","lat":48.87801800779998,"lng":2.4077311165674495,"labeledLatLngs":[{"label":"display","lat":48.87801800779998,"lng":2.4077311165674495}],"distance":7423,"postalCode":"75020","cc":"FR","city":"Paris","state":"Île-de-France","country":"France","formattedAddress":["rue de paris","75020 Paris","France"]},"categories":[{"id":"4bf58dd8d48988d130941735","name":"Building","pluralName":"Buildings","shortName":"Building","icon":{"prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/default_","suffix":".png"},"primary":true}],"verified":false,"stats":{"tipCount":0,"usersCount":0,"checkinsCount":0,"visitsCount":0},"beenHere":{"count":0,"lastCheckinExpiredAt":0,"marked":false,"unconfirmedCount":0},"hereNow":{"count":0,"summary":"Nobody here","groups":[]},"referralId":"v-1533296234","venueChains":[],"hasPerk":false},{"id":"4f1fca34e4b0aabf524f2586","name":"monument St Louis","contact":{},"location":{"lat":48.874099142490905,"lng":2.3685860790822333,"labeledLatLngs":[{"label":"display","lat":48.874099142490905,"lng":2.3685860790822333}],"distance":4566,"cc":"FR","city":"Paris","state":"Île-de-France","country":"France","formattedAddress":["Paris","France"]},"categories":[{"id":"4deefb944765f83613cdba6e","name":"Historic Site","pluralName":"Historic Sites","shortName":"Historic Site","icon":{"prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/historicsite_","suffix":".png"},"primary":true}],"verified":false,"stats":{"tipCount":0,"usersCount":0,"checkinsCount":0,"visitsCount":0},"beenHere":{"count":0,"lastCheckinExpiredAt":0,"marked":false,"unconfirmedCount":0},"hereNow":{"count":0,"summary":"Nobody here","groups":[]},"referralId":"v-1533296234","venueChains":[],"hasPerk":false},{"id":"4ec7ab4c9adf9c7bf33884da","name":"Monuments Aux Morts","contact":{},"location":{"address":"Édouard Vaillant","lat":48.7981269039959,"lng":2.0263120755250954,"labeledLatLngs":[{"label":"display","lat":48.7981269039959,"lng":2.0263120755250954}],"distance":21905,"postalCode":"78390","cc":"FR","city":"Bois-d'Arcy","state":"Île-de-France","country":"France","formattedAddress":["Édouard Vaillant","78390 Bois-d'Arcy","France"]},"categories":[{"id":"4bf58dd8d48988d15c941735","name":"Cemetery","pluralName":"Cemeteries","shortName":"Cemetery","icon":{"prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/cemetery_","suffix":".png"},"primary":true}],"verified":false,"stats":{"tipCount":0,"usersCount":0,"checkinsCount":0,"visitsCount":0},"beenHere":{"count":0,"lastCheckinExpiredAt":0,"marked":false,"unconfirmedCount":0},"hereNow":{"count":0,"summary":"Nobody here","groups":[]},"referralId":"v-1533296234","venueChains":[],"hasPerk":false}]}}
+{  
+    "meta":{  
+       "code":200,
+       "requestId":"5b643e6a351e3d7b3c2b36e0"
+    },
+    "response":{  
+       "venues":[  
+          {  
+             "id":"5177bda8498e9da00d80edc9",
+             "name":"Centre des monuments nationaux (CMN)",
+             "contact":{  
+ 
+             },
+             "location":{  
+                "address":"62 rue Saint-Antoine",
+                "lat":48.85443111981487,
+                "lng":2.363646021385723,
+                "labeledLatLngs":[  
+                   {  
+                      "label":"display",
+                      "lat":48.85443111981487,
+                      "lng":2.363646021385723
+                   }
+                ],
+                "distance":3936,
+                "postalCode":"75004",
+                "cc":"FR",
+                "city":"Paris",
+                "state":"Île-de-France",
+                "country":"France",
+                "formattedAddress":[  
+                   "62 rue Saint-Antoine",
+                   "75004 Paris",
+                   "France"
+                ]
+             },
+             "categories":[  
+                {  
+                   "id":"4bf58dd8d48988d124941735",
+                   "name":"Office",
+                   "pluralName":"Offices",
+                   "shortName":"Office",
+                   "icon":{  
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{  
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{  
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "hereNow":{  
+                "count":0,
+                "summary":"Nobody here",
+                "groups":[  
+ 
+                ]
+             },
+             "referralId":"v-1533296234",
+             "venueChains":[  
+ 
+             ],
+             "hasPerk":false
+          },
+          {"id":"4dc790c01fc72e86376fc69c","name":"Jardin du Musée Rodin","contact":{},"location":{"address":"79 rue de Varenne","crossStreet":"Musée Rodin","lat":48.85583847334092,"lng":2.3158099297222425,"labeledLatLngs":[{"label":"display","lat":48.85583847334092,"lng":2.3158099297222425}],"distance":552,"postalCode":"75014","cc":"FR","city":"Paris","state":"Île-de-France","country":"France","formattedAddress":["79 rue de Varenne (Musée Rodin)","75014 Paris","France"]},"categories":[{"id":"4bf58dd8d48988d15a941735","name":"Garden","pluralName":"Gardens","shortName":"Garden","icon":{"prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/garden_","suffix":".png"},"primary":true}],"verified":false,"stats":{"tipCount":0,"usersCount":0,"checkinsCount":0,"visitsCount":0},"beenHere":{"count":0,"lastCheckinExpiredAt":0,"marked":false,"unconfirmedCount":0},"hereNow":{"count":0,"summary":"Nobody here","groups":[]},"referralId":"v-1533300908","venueChains":[],"hasPerk":false},
+          {"id":"4b82c9adf964a520f7e430e3","name":"Place des Vosges","contact":{},"location":{"address":"Place des Vosges","lat":48.85562342675294,"lng":2.365531325340271,"labeledLatLngs":[{"label":"display","lat":48.85562342675294,"lng":2.365531325340271}],"distance":4057,"postalCode":"75004","cc":"FR","city":"Paris","state":"Île-de-France","country":"France","formattedAddress":["Place des Vosges","75004 Paris","France"]},"categories":[{"id":"4bf58dd8d48988d164941735","name":"Plaza","pluralName":"Plazas","shortName":"Plaza","icon":{"prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/plaza_","suffix":".png"},"primary":true}],"verified":true,"stats":{"tipCount":0,"usersCount":0,"checkinsCount":0,"visitsCount":0},"beenHere":{"count":0,"lastCheckinExpiredAt":0,"marked":false,"unconfirmedCount":0},"hereNow":{"count":1,"summary":"One other person is here","groups":[{"type":"others","name":"Other people here","count":1,"items":[]}]},"referralId":"v-1533301300","venueChains":[],"hasPerk":false},
+          
+ 
+ 
+ {  
+             "id":"51a2445e5019c80b56934c75",
+             "name":"Eiffel Tower (Tour Eiffel)",
+             "contact":{  
+ 
+             },
+             "location":{  
+                "address":"5 avenue Anatole France",
+                "crossStreet":"Parc du Champ-de-Mars",
+                "lat":48.858249354605626,
+                "lng":2.2944259643554683,
+                "labeledLatLngs":[  
+                   {  
+                      "label":"display",
+                      "lat":48.858249354605626,
+                      "lng":2.2944259643554683
+                   }
+                ],
+                "distance":1177,
+                "postalCode":"75007",
+                "cc":"FR",
+                "city":"Paris",
+                "state":"Île-de-France",
+                "country":"France",
+                "formattedAddress":[  
+                   "5 avenue Anatole France (Parc du Champ-de-Mars)",
+                   "75007 Paris",
+                   "France"
+                ]
+             },
+             "categories":[  
+                {  
+                   "id":"4bf58dd8d48988d12d941735",
+                   "name":"Monument \/ Landmark",
+                   "pluralName":"Monuments \/ Landmarks",
+                   "shortName":"Landmark",
+                   "icon":{  
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/government_monument_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{  
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{  
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "hereNow":{  
+                "count":8,
+                "summary":"8 people are here",
+                "groups":[  
+                   {  
+                      "type":"others",
+                      "name":"Other people here",
+                      "count":8,
+                      "items":[  
+ 
+                      ]
+                   }
+                ]
+             },
+             "referralId":"v-1533300469",
+             "venueChains":[  
+ 
+             ],
+             "hasPerk":false
+          },
+ 
+ 
+          {  
+             "id":"4ca47d7d1ee76dcb31e601de",
+             "name":"Centre Des Monuments Nationaux",
+             "contact":{  
+ 
+             },
+             "location":{  
+                "address":"rue de paris",
+                "lat":48.87801800779998,
+                "lng":2.4077311165674495,
+                "labeledLatLngs":[  
+                   {  
+                      "label":"display",
+                      "lat":48.87801800779998,
+                      "lng":2.4077311165674495
+                   }
+                ],
+                "distance":7423,
+                "postalCode":"75020",
+                "cc":"FR",
+                "city":"Paris",
+                "state":"Île-de-France",
+                "country":"France",
+                "formattedAddress":[  
+                   "rue de paris",
+                   "75020 Paris",
+                   "France"
+                ]
+             },
+             "categories":[  
+                {  
+                   "id":"4bf58dd8d48988d130941735",
+                   "name":"Building",
+                   "pluralName":"Buildings",
+                   "shortName":"Building",
+                   "icon":{  
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{  
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{  
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "hereNow":{  
+                "count":0,
+                "summary":"Nobody here",
+                "groups":[  
+ 
+                ]
+             },
+             "referralId":"v-1533296234",
+             "venueChains":[  
+ 
+             ],
+             "hasPerk":false
+          },
+          {  
+             "id":"4f1fca34e4b0aabf524f2586",
+             "name":"monument St Louis",
+             "contact":{  
+ 
+             },
+             "location":{  
+                "lat":48.874099142490905,
+                "lng":2.3685860790822333,
+                "labeledLatLngs":[  
+                   {  
+                      "label":"display",
+                      "lat":48.874099142490905,
+                      "lng":2.3685860790822333
+                   }
+                ],
+                "distance":4566,
+                "cc":"FR",
+                "city":"Paris",
+                "state":"Île-de-France",
+                "country":"France",
+                "formattedAddress":[  
+                   "Paris",
+                   "France"
+                ]
+             },
+             "categories":[  
+                {  
+                   "id":"4deefb944765f83613cdba6e",
+                   "name":"Historic Site",
+                   "pluralName":"Historic Sites",
+                   "shortName":"Historic Site",
+                   "icon":{  
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/historicsite_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{  
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{  
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "hereNow":{  
+                "count":0,
+                "summary":"Nobody here",
+                "groups":[  
+ 
+                ]
+             },
+             "referralId":"v-1533296234",
+             "venueChains":[  
+ 
+             ],
+             "hasPerk":false
+          },
+          {  
+             "id":"4ec7ab4c9adf9c7bf33884da",
+             "name":"Monuments Aux Morts",
+             "contact":{  
+ 
+             },
+             "location":{  
+                "address":"Édouard Vaillant",
+                "lat":48.7981269039959,
+                "lng":2.0263120755250954,
+                "labeledLatLngs":[  
+                   {  
+                      "label":"display",
+                      "lat":48.7981269039959,
+                      "lng":2.0263120755250954
+                   }
+                ],
+                "distance":21905,
+                "postalCode":"78390",
+                "cc":"FR",
+                "city":"Bois-d'Arcy",
+                "state":"Île-de-France",
+                "country":"France",
+                "formattedAddress":[  
+                   "Édouard Vaillant",
+                   "78390 Bois-d'Arcy",
+                   "France"
+                ]
+             },
+             "categories":[  
+                {  
+                   "id":"4bf58dd8d48988d15c941735",
+                   "name":"Cemetery",
+                   "pluralName":"Cemeteries",
+                   "shortName":"Cemetery",
+                   "icon":{  
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/cemetery_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{  
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{  
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "hereNow":{  
+                "count":0,
+                "summary":"Nobody here",
+                "groups":[  
+ 
+                ]
+             },
+             "referralId":"v-1533296234",
+             "venueChains":[  
+ 
+             ],
+             "hasPerk":false
+          }
+       ]
+    }
+ }
