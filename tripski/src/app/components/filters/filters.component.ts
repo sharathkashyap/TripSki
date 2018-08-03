@@ -7,9 +7,11 @@ import { MatGridListModule, MatButtonModule, MatIconModule} from '@angular/mater
   styleUrls: ['./filters.component.scss']
 })
 export class FiltersComponent implements OnInit {
+  evtName : any;
 
   constructor() { }
   filterCall(evt):any{
+    this.evtName =evt;
     console.log(evt);
   }
   ngOnInit() {

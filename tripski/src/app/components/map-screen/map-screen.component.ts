@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { icon, latLng, marker,Layer, polyline, tileLayer, map } from 'leaflet';
 import { HttpClient } from '@angular/common/http'
+import {HostListener} from '@angular/core'
 declare let L;
 
 @Component({
   selector: 'app-map-screen',
   templateUrl: './map-screen.component.html',
-  styleUrls: ['./map-screen.component.scss']
+  styleUrls: ['./map-screen.component.scss'],
+  host: {'(click)': 'filterCall(this.evt)'}
 })
 export class MapScreenComponent implements OnInit {
 
@@ -163,7 +165,7 @@ export class MapScreenComponent implements OnInit {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
     // Marker for the top of Mt. Ranier
-    this.summit = marker([12.943260, 77.690619], {
+    this.summit = marker([48.8593152, 2.3104179], {
       icon: icon({
         iconSize: [25, 41],
         iconAnchor: [13, 41],
@@ -171,7 +173,7 @@ export class MapScreenComponent implements OnInit {
         shadowUrl: 'leaflet/marker-shadow.png'
       })
     });
-    this.paradise = marker([12.949830, 77.699127], {
+    this.paradise = marker([48.8775512, 2.3207157], {
       icon: icon({
         iconSize: [25, 41],
         iconAnchor: [13, 41],
@@ -194,8 +196,8 @@ export class MapScreenComponent implements OnInit {
     };
     this.options = {
       layers: [this.streetMaps, this.route, this.summit, this.paradise],
-      zoom: 7,
-      center: latLng([12.943260, 77.690619])
+      zoom: 13,
+      center: latLng([48.8593152, 2.3104179])
     };
     this.getFourSqrData();
   }
@@ -204,4 +206,8 @@ export class MapScreenComponent implements OnInit {
     this.mapToDisplay = mapObject;
     console.log(mapObject);
  }
+
+ @HostListener('click') filterCall(evt){
+  console.log("User Click "+evt);
+}
 }
