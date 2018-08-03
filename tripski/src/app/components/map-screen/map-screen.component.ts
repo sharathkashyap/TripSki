@@ -24,10 +24,11 @@ export class MapScreenComponent implements OnInit {
   markers: Layer[] = [];
   CLIENT_ID="KZNWNI5VO2IZU0A2PX1YEKMBJQPTRPDMMULMAXGUWV33YK4D";
   CLIENT_SECRET="5AXIL41M1U0RMXCLGPVTCUZWS1I1SE03QQFT43YZOROD2X3I";
+  GOOGLE_API="AIzaSyDRdQIa-EGFEOJfRH2Ig6Yn1BM8YXKBABc";
 
 /**
- * 
- * @param encoded 
+ *
+ * @param encoded
  */
   private decodePoly(encoded: string): any {
     encoded = "u}~mAy}dyMi@kACK?GL]BEtA?RPbBeA?CAC?GFKJGL?@@FUFYm@]e@YW[u@]AAACXeAPORWXgBDy@Cs@CYc@gB?[Ry@EGAG?KJOFAJiB?SCkABi@aBy@aAa@YIy@QyEiAeEeAUIFQkLsCUGOEw@MeAOqFo@Kt@";
@@ -62,28 +63,42 @@ export class MapScreenComponent implements OnInit {
     return points;
   }
 /**
- * 
+ *
  */
   private getFourSqrData() {
     console.log(L);
-    this.httpRet.get("https://api.foursquare.com/v2/venues/search?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v=20130815&ll=17.416471,78.438247&query=restuarant").subscribe((resultListToDisplay:Object) => this.processJsonList(resultListToDisplay));   
+    /*this.httpRet.get("https://api.foursquare.com/v2/venues/search?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v=20130815&ll=17.416471,78.438247&query=restuarant").subscribe((resultListToDisplay:Object) => this.processJsonList(resultListToDisplay));*/
+    this.httpRet.get("/assets/results/foursquare.json").subscribe((resultListToDisplay:Object) => this.processJsonList(resultListToDisplay));
+  }
+
+  private fetchRoute(from,to) {
+      /*this.httpRet.get("https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood4&key=AIzaSyCL9XmjDgBbamMh3m0Ze5988_diW2nb6B0")
+      .subscribe((routeListToDisplay:Object) => this.processRouteList(routeListToDisplay));*/
+      this.httpRet.get("/assets/results/directions.json").subscribe((routeListToDisplay:Object) => this.processRouteList(routeListToDisplay));
+  }
+
+  private processRouteList(routeList) {
+    if(routeList.routes > 0) {
+      //routeList.routes[0].
+    }
   }
 
   private fetchFourSquareImages(venueId,venue) {
     var version="20180802"
-    this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));   
+    /*this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));*/
+     this.httpRet.get("/assets/results/photo.json").subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));
   }
 
   private processImageList(result,venueId,venue) {
     this.convertVenueToGeoJson(venue,result);
-    
+
   }
 
   private convertVenueToGeoJson(venue,photoResponse) {
     var location = venue.location;
     var category = venue.categories[0];
     var imgSrc = photoResponse.response.photos.count > 0?photoResponse.response.photos.items[0].prefix+"100"+photoResponse.response.photos.items[0].suffix:category.icon.prefix+"64"+category.icon.suffix;
-    if(location.lat!=null && location.lng!=null) {    
+    if(location.lat!=null && location.lng!=null) {
       var markerToDisplay = marker([location.lat, location.lng],{
         icon:  new L.DivIcon({
           className: 'my-div-icon',
@@ -97,20 +112,20 @@ export class MapScreenComponent implements OnInit {
     }
   }
 
-  processJsonList(resultListToDisplay: any) {       
+  processJsonList(resultListToDisplay: any) {
     this.resultList = resultListToDisplay;
     if(this.resultList.response!=null) {
       var venues = this.resultList.response.venues;
-      for(var i=0;i<1;i++) {
+      for(var i=0;i<venues.length;i++) {
         var venue = venues[i];
         this.fetchFourSquareImages(venue.id,venue);
       }
     }
   }
 
-  
+
 /**
- * 
+ *
  */
   ngOnInit() {
     this.streetMaps = tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -155,12 +170,12 @@ export class MapScreenComponent implements OnInit {
       layers: [this.streetMaps, this.route, this.summit, this.paradise],
       zoom: 7,
       center: latLng([12.943260, 77.690619])
-    };   
-    this.getFourSqrData(); 
+    };
+    this.getFourSqrData();
   }
 
   onMapReady(mapObject: any) {
-    this.mapToDisplay = mapObject; 
-    console.log(mapObject);   
- }   
+    this.mapToDisplay = mapObject;
+    console.log(mapObject);
+ }
 }

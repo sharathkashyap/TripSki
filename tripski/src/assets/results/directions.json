@@ -1,0 +1,253 @@
+{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJ301LKrETrjsRYXG5dhKqNIo",
+         "types" : [ "route" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJL8CbusoTrjsRkiR5Fyt4H78",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 12.9499761,
+               "lng" : 77.69942619999999
+            },
+            "southwest" : {
+               "lat" : 12.942014,
+               "lng" : 77.69068849999999
+            }
+         },
+         "copyrights" : "Map data ©2018 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "1.8 km",
+                  "value" : 1797
+               },
+               "duration" : {
+                  "text" : "7 mins",
+                  "value" : 396
+               },
+               "end_address" : "89/1, Service Rd, Marathahalli Village, Marathahalli, Bengaluru, Karnataka 560037, India",
+               "end_location" : {
+                  "lat" : 12.9499761,
+                  "lng" : 77.69916169999999
+               },
+               "start_address" : "Etamin Block Rd, Kodbisanhalli, Bellandur Amanikere, Karnataka 560103, India",
+               "start_location" : {
+                  "lat" : 12.9431459,
+                  "lng" : 77.69068849999999
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "81 m",
+                        "value" : 81
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 29
+                     },
+                     "end_location" : {
+                        "lat" : 12.943287,
+                        "lng" : 77.6913488
+                     },
+                     "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e on \u003cb\u003eEtamin Block Rd\u003c/b\u003e toward \u003cb\u003ePrestige Tech Park Internal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Block 3 (on the left)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "u}~mAy}dyMi@kACK?GL]BE"
+                     },
+                     "start_location" : {
+                        "lat" : 12.9431459,
+                        "lng" : 77.69068849999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 129
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 53
+                     },
+                     "end_location" : {
+                        "lat" : 12.9422594,
+                        "lng" : 77.6916111
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003ePrestige Tech Park Internal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "q~~mA}aeyMtA?RPbBeA"
+                     },
+                     "start_location" : {
+                        "lat" : 12.943287,
+                        "lng" : 77.6913488
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 520
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 127
+                     },
+                     "end_location" : {
+                        "lat" : 12.9424168,
+                        "lng" : 77.6955543
+                     },
+                     "html_instructions" : "At the roundabout, take the \u003cb\u003e2nd\u003c/b\u003e exit\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e",
+                     "maneuver" : "roundabout-left",
+                     "polyline" : {
+                        "points" : "cx~mAqceyM?A?AAA?A?A?A?A?A@??A?A@A?A@??A@A@A@??ABA@?@A@?@?@?@?@?@?@?@??@@?DUFYm@]e@YW[u@]AAAA?A?A?ANi@DQ@A?A@A@ADC@AFGLO@A@C@AJg@L_ABg@@QAKAg@CYc@gB?[Ry@CEAA?AAC?AAA?A?C@C@GBA@CBAFA"
+                     },
+                     "start_location" : {
+                        "lat" : 12.9422594,
+                        "lng" : 77.6916111
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 133
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 32
+                     },
+                     "end_location" : {
+                        "lat" : 12.9423575,
+                        "lng" : 77.6967724
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e toward \u003cb\u003eService Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "cy~mAe|eyMJiB?I?ICkABi@"
+                     },
+                     "start_location" : {
+                        "lat" : 12.9424168,
+                        "lng" : 77.6955543
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 411
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 74
+                     },
+                     "end_location" : {
+                        "lat" : 12.9457907,
+                        "lng" : 77.69813649999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at JP Morgan onto \u003cb\u003eService Rd\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "wx~mAycfyMgAi@YOg@UYKICOEOEMCOCKCaAW{A[k@OOESGsCq@OEMEKEIC"
+                     },
+                     "start_location" : {
+                        "lat" : 12.9423575,
+                        "lng" : 77.6967724
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "11 m",
+                        "value" : 11
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 2
+                     },
+                     "end_location" : {
+                        "lat" : 12.9457477,
+                        "lng" : 77.6982311
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e toward \u003cb\u003eNH 44\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "en_nAklfyMFQ"
+                     },
+                     "start_location" : {
+                        "lat" : 12.9457907,
+                        "lng" : 77.69813649999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 483
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 49
+                     },
+                     "end_location" : {
+                        "lat" : 12.9499199,
+                        "lng" : 77.69942619999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eNH 44\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "}m_nA}lfyMkLsCCAQECAKCMCKAKCQCOCOCQCSCQCSCQAMCOAMA}@MoAO"
+                     },
+                     "start_location" : {
+                        "lat" : 12.9457477,
+                        "lng" : 77.6982311
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "29 m",
+                        "value" : 29
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 30
+                     },
+                     "end_location" : {
+                        "lat" : 12.9499761,
+                        "lng" : 77.69916169999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "_h`nAmtfyMCPGb@"
+                     },
+                     "start_location" : {
+                        "lat" : 12.9499199,
+                        "lng" : 77.69942619999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "u}~mAy}dyMi@kACK?GL]BEtA?RPbBeA?CAC?GFKJGL?@@FUFYm@]e@YW[u@]AAACXeAPORWXgBDy@Cs@CYc@gB?[Ry@EGAG?KJOFAJiB?SCkABi@aBy@aAa@YIy@QyEiAeEeAUIFQkLsCUGOEw@MeAOqFo@Kt@"
+         },
+         "summary" : "NH 44",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
