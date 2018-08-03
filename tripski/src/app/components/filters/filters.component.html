@@ -1,3 +1,19 @@
-<p>
-  filters works!
-</p>
+<div class="button-row">
+  
+  <button mat-fab color="primary" (click)='filterCall("restaurant")' >
+    <mat-icon aria-label="Example icon-button with a heart icon">restaurant_menu</mat-icon>
+  </button>
+  <button mat-fab value="cafe" color="success" (click)='filterCall("cafe")'>
+    <mat-icon aria-label="Example icon-button with a heart icon">local_cafe</mat-icon>
+  </button>
+  <button mat-fab value="localSite" (click)='filterCall("site")'>
+    <mat-icon aria-label="Example icon-button with a heart icon">local_see</mat-icon>
+  </button>
+  <button mat-fab value="movie" color="warn" (click)='filterCall("movie")'>
+    <mat-icon aria-label="example">movie</mat-icon>
+  </button>
+  <button mat-fab  value="train"  (click)='filterCall("train")' color="primary">
+    <mat-icon aria-label="example">train</mat-icon>
+  </button> 
+  
+</div>

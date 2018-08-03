@@ -8,8 +8,9 @@ import { MapScreenComponent } from './components/map-screen/map-screen.component
 import { FiltersComponent } from './components/filters/filters.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatGridListModule} from '@angular/material'
+import { MatGridListModule, MatButtonModule, MatIconModule} from '@angular/material'
 import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserAnimationsModule,
     MatGridListModule,
     LeafletModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule, 
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
