@@ -25,13 +25,13 @@ export class MapScreenComponent implements OnInit {
   CLIENT_ID="KZNWNI5VO2IZU0A2PX1YEKMBJQPTRPDMMULMAXGUWV33YK4D";
   CLIENT_SECRET="5AXIL41M1U0RMXCLGPVTCUZWS1I1SE03QQFT43YZOROD2X3I";
   GOOGLE_API="AIzaSyDRdQIa-EGFEOJfRH2Ig6Yn1BM8YXKBABc";
+  venueMap: Map<String,any>;
 
 /**
  *
  * @param encoded
  */
-  private decodePoly(encoded: string): any {
-    encoded = "u}~mAy}dyMi@kACK?GL]BEtA?RPbBeA?CAC?GFKJGL?@@FUFYm@]e@YW[u@]AAACXeAPORWXgBDy@Cs@CYc@gB?[Ry@EGAG?KJOFAJiB?SCkABi@aBy@aAa@YIy@QyEiAeEeAUIFQkLsCUGOEw@MeAOqFo@Kt@";
+  private decodePoly(encoded: string): any {    
     var points = []
     var index = 0, len = encoded.length;
     var lat = 0, lng = 0;
@@ -79,7 +79,7 @@ export class MapScreenComponent implements OnInit {
 
   private processRouteList(routeList) {
     if(routeList.routes > 0) {
-      //routeList.routes[0].
+      this.route.push(this.decodePoly(routeList.routes[0].overview_polyline.points));
     }
   }
 
@@ -99,25 +99,51 @@ export class MapScreenComponent implements OnInit {
     var category = venue.categories[0];
     var imgSrc = photoResponse.response.photos.count > 0?photoResponse.response.photos.items[0].prefix+"100"+photoResponse.response.photos.items[0].suffix:category.icon.prefix+"64"+category.icon.suffix;
     if(location.lat!=null && location.lng!=null) {
-      var markerToDisplay = marker([location.lat, location.lng],{
+
+      var geojsonFeature = {
+        "type": "Feature",
+        "properties": {
+            "name":venue.name,
+            "amenity": category.name,
+            "popupContent": ""
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [location.lat,  location.lng],
+            "custom": venue
+        }
+    };
+    let options = { "color": "#ff7800", "weight": 5, "opacity": 0.65 };
+    
+    
+      var markerToDisplay = marker([location.lat, location.lng],{                
         icon:  new L.DivIcon({
           className: 'my-div-icon',
           html: '<img class="my-div-image" id="'+venue.id+'" src="'+imgSrc+'">'+
           '<div class="imageHolder">'+
           '<span class="my-div-span">'+venue.name+'</span>'+
           '</div>'
-          })
+          })    
+      });    
+      var venueMapToProcess = this.venueMap;   
+      markerToDisplay.options.title = venue.id;             
+      markerToDisplay.on("click", function (event) {
+        alert(event.target.options.title);
+        var venue = venueMapToProcess.get(event.target.options.title);
+        alert(venue);
       });
       this.markers.push(markerToDisplay);
     }
   }
 
   processJsonList(resultListToDisplay: any) {
+    this.venueMap = new Map<String,any>();
     this.resultList = resultListToDisplay;
     if(this.resultList.response!=null) {
       var venues = this.resultList.response.venues;
       for(var i=0;i<venues.length;i++) {
         var venue = venues[i];
+        this.venueMap.set(venue.id,venue);
         this.fetchFourSquareImages(venue.id,venue);
       }
     }
