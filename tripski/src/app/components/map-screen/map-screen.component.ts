@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { icon, latLng, marker,Layer, polyline, tileLayer, map } from 'leaflet';
 import { HttpClient } from '@angular/common/http'
 import {HostListener} from '@angular/core'
+
 declare let L;
 
 @Component({
   selector: 'app-map-screen',
   templateUrl: './map-screen.component.html',
   styleUrls: ['./map-screen.component.scss'],
-  host: {'(click)': 'filterCall(this.evt)'}
+ host: {'(click)': 'filterCall(this.evt)'}
 })
 export class MapScreenComponent implements OnInit {
 
@@ -27,7 +28,9 @@ export class MapScreenComponent implements OnInit {
   CLIENT_ID="KZNWNI5VO2IZU0A2PX1YEKMBJQPTRPDMMULMAXGUWV33YK4D";
   CLIENT_SECRET="5AXIL41M1U0RMXCLGPVTCUZWS1I1SE03QQFT43YZOROD2X3I";
   GOOGLE_API="AIzaSyDRdQIa-EGFEOJfRH2Ig6Yn1BM8YXKBABc";
+  ROUTE_API="AIzaSyABy7E-PdNxSdV08aIB3FfBPKBz04YOxuk";
   venueMap: Map<String,any>;
+  currentVenue: any; 
 
 /**
  *
@@ -74,21 +77,22 @@ export class MapScreenComponent implements OnInit {
   }
 
   private fetchRoute(from,to) {
-      /*this.httpRet.get("https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood4&key=AIzaSyCL9XmjDgBbamMh3m0Ze5988_diW2nb6B0")
-      .subscribe((routeListToDisplay:Object) => this.processRouteList(routeListToDisplay));*/
-      this.httpRet.get("/assets/results/directions.json").subscribe((routeListToDisplay:Object) => this.processRouteList(routeListToDisplay));
+      this.httpRet.get("https://maps.googleapis.com/maps/api/directions/json?origin="+from.lat+","+from.lng+"&destination="+to.lat+","+to.lng+"&key=AIzaSyCL9XmjDgBbamMh3m0Ze5988_diW2nb6B0")
+      .subscribe((routeListToDisplay:Object) => this.processRouteList(routeListToDisplay));
+      //this.httpRet.get("/assets/results/directions.json").subscribe((routeListToDisplay:Object) => this.processRouteList(routeListToDisplay));
   }
 
   private processRouteList(routeList) {
-    if(routeList.routes > 0) {
-      this.route.push(this.decodePoly(routeList.routes[0].overview_polyline.points));
+    if(routeList.routes.length > 0) {
+      var route = polyline(this.decodePoly(routeList.routes[0].overview_polyline.points));
+      //var path = Path;
+      this.mapToDisplay.addLayer(route);
     }
   }
 
   private fetchFourSquareImages(venueId,venue) {
     var version="20180802"
-    //this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+
-    //version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));
+    /*this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));*/
      this.httpRet.get("/assets/results/photo.json").subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));
   }
 
@@ -100,7 +104,7 @@ export class MapScreenComponent implements OnInit {
   private convertVenueToGeoJson(venue,photoResponse) {
     var location = venue.location;
     var category = venue.categories[0];
-    var imgSrc = photoResponse.response.photos.count > 0?photoResponse.response.photos.items[0].prefix+"250"+photoResponse.response.photos.items[0].suffix:category.icon.prefix+"64"+category.icon.suffix;
+    var imgSrc = photoResponse.response.photos.count > 0?photoResponse.response.photos.items[0].prefix+"100"+photoResponse.response.photos.items[0].suffix:category.icon.prefix+"64"+category.icon.suffix;
     if(location.lat!=null && location.lng!=null) {
 
       var geojsonFeature = {
@@ -129,11 +133,21 @@ export class MapScreenComponent implements OnInit {
           })    
       });    
       var venueMapToProcess = this.venueMap;   
-      markerToDisplay.options.title = venue.id;             
-      markerToDisplay.on("click", function (event) {
-        alert(event.target.options.title);
-        var venue = venueMapToProcess.get(event.target.options.title);
-        alert(venue);
+      markerToDisplay.options.title = venue.id;   
+      var currentObj = this;          
+      markerToDisplay.on("click", function (event) {        
+        var venue = venueMapToProcess.get(event.target.options.title);  
+        var source = currentObj.currentVenue!=null?currentObj.currentVenue:venue;      
+        var destination = currentObj.currentVenue!=null?venue:null;
+        if(source!=null && destination != null) {
+          currentObj.fetchRoute(source.location,destination.location);
+          currentObj.currentVenue = destination;
+        } 
+        if(currentObj.currentVenue!=null) {
+
+        } else {
+          currentObj.currentVenue = venue;
+        }      
       });
       this.markers.push(markerToDisplay);
     }
