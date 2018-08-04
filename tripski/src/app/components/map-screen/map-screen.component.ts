@@ -25,8 +25,10 @@ export class MapScreenComponent implements OnInit {
   resultList: any;
   mapToDisplay: Object;
   markers: Layer[] = [];
-  CLIENT_ID="KZNWNI5VO2IZU0A2PX1YEKMBJQPTRPDMMULMAXGUWV33YK4D";
-  CLIENT_SECRET="5AXIL41M1U0RMXCLGPVTCUZWS1I1SE03QQFT43YZOROD2X3I";
+  //CLIENT_ID="KZNWNI5VO2IZU0A2PX1YEKMBJQPTRPDMMULMAXGUWV33YK4D";
+  CLIENT_ID = "DEXG5TFSZ5VGHF03KKOFNZX5TFT0IHUX02RS1WUCFTAS1DPQ";
+  //CLIENT_SECRET="5AXIL41M1U0RMXCLGPVTCUZWS1I1SE03QQFT43YZOROD2X3I";
+  CLIENT_SECRET="KPK0AWAK2QXRJWMHTLVAT5FAL0H20E5TWY3RP3ZICHGFQME3";
   GOOGLE_API="AIzaSyDRdQIa-EGFEOJfRH2Ig6Yn1BM8YXKBABc";
   ROUTE_API="AIzaSyABy7E-PdNxSdV08aIB3FfBPKBz04YOxuk";
   venueMap: Map<String,any>;
@@ -92,8 +94,8 @@ export class MapScreenComponent implements OnInit {
 
   private fetchFourSquareImages(venueId,venue) {
     var version="20180802"
-    /*this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));*/
-     this.httpRet.get("/assets/results/photo.json").subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));
+    this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));
+    // this.httpRet.get("/assets/results/photo.json").subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));
   }
 
   private processImageList(result,venueId,venue) {
@@ -130,13 +132,20 @@ export class MapScreenComponent implements OnInit {
           '<div class="imageHolder">'+
           '<span class="my-div-span">'+venue.name+'</span>'+
           '</div>'
-          })    
+          })   
       });    
       var venueMapToProcess = this.venueMap;   
       markerToDisplay.options.title = venue.id;   
-      var currentObj = this;          
+      var currentObj = this;        
+      currentObj.currentVenue = {
+        location: {
+          lat : "48.8593152",
+          lng : "2.3104179"
+        }
+      };        
       markerToDisplay.on("click", function (event) {        
         var venue = venueMapToProcess.get(event.target.options.title);  
+                
         var source = currentObj.currentVenue!=null?currentObj.currentVenue:venue;      
         var destination = currentObj.currentVenue!=null?venue:null;
         if(source!=null && destination != null) {
