@@ -1,7 +1,25 @@
-<div class="map"
-     leaflet
-     [leafletOptions]="options"
-     [leafletLayersControl]="layersControl"
-     [leafletLayers]="markers"
-     (leafletMapReady)="onMapReady($event)">
-</div>
+<mat-grid-list cols="4" rowHeight="2:1">
+
+    <mat-grid-tile rowspan="4" colspan="3">
+    	<div class="mapScreen">
+    		<div class="map"
+     			leaflet
+     			[leafletOptions]="options"
+     			[leafletLayersControl]="layersControl"
+     			[leafletLayers]="markers"
+     			(leafletMapReady)="onMapReady($event)">
+			</div>
+    	</div>
+    </mat-grid-tile>
+
+	<mat-grid-tile colspan="1" rowspan="1">
+		<app-filters></app-filters>
+	</mat-grid-tile>
+
+	<mat-grid-tile colspan="1" rowspan="3">
+		<app-booking></app-booking>
+	</mat-grid-tile>
+
+</mat-grid-list>
+
+
