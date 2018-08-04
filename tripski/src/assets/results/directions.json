@@ -1,253 +1,396 @@
 {
-   "geocoded_waypoints" : [
-      {
-         "geocoder_status" : "OK",
-         "place_id" : "ChIJ301LKrETrjsRYXG5dhKqNIo",
-         "types" : [ "route" ]
-      },
-      {
-         "geocoder_status" : "OK",
-         "place_id" : "ChIJL8CbusoTrjsRkiR5Fyt4H78",
-         "types" : [ "street_address" ]
-      }
-   ],
-   "routes" : [
-      {
-         "bounds" : {
-            "northeast" : {
-               "lat" : 12.9499761,
-               "lng" : 77.69942619999999
-            },
-            "southwest" : {
-               "lat" : 12.942014,
-               "lng" : 77.69068849999999
-            }
-         },
-         "copyrights" : "Map data ©2018 Google",
-         "legs" : [
-            {
-               "distance" : {
-                  "text" : "1.8 km",
-                  "value" : 1797
-               },
-               "duration" : {
-                  "text" : "7 mins",
-                  "value" : 396
-               },
-               "end_address" : "89/1, Service Rd, Marathahalli Village, Marathahalli, Bengaluru, Karnataka 560037, India",
-               "end_location" : {
-                  "lat" : 12.9499761,
-                  "lng" : 77.69916169999999
-               },
-               "start_address" : "Etamin Block Rd, Kodbisanhalli, Bellandur Amanikere, Karnataka 560103, India",
-               "start_location" : {
-                  "lat" : 12.9431459,
-                  "lng" : 77.69068849999999
-               },
-               "steps" : [
-                  {
-                     "distance" : {
-                        "text" : "81 m",
-                        "value" : 81
-                     },
-                     "duration" : {
-                        "text" : "1 min",
-                        "value" : 29
-                     },
-                     "end_location" : {
-                        "lat" : 12.943287,
-                        "lng" : 77.6913488
-                     },
-                     "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e on \u003cb\u003eEtamin Block Rd\u003c/b\u003e toward \u003cb\u003ePrestige Tech Park Internal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Block 3 (on the left)\u003c/div\u003e",
-                     "polyline" : {
-                        "points" : "u}~mAy}dyMi@kACK?GL]BE"
-                     },
-                     "start_location" : {
-                        "lat" : 12.9431459,
-                        "lng" : 77.69068849999999
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "0.1 km",
-                        "value" : 129
-                     },
-                     "duration" : {
-                        "text" : "1 min",
-                        "value" : 53
-                     },
-                     "end_location" : {
-                        "lat" : 12.9422594,
-                        "lng" : 77.6916111
-                     },
-                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003ePrestige Tech Park Internal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e",
-                     "maneuver" : "turn-right",
-                     "polyline" : {
-                        "points" : "q~~mA}aeyMtA?RPbBeA"
-                     },
-                     "start_location" : {
-                        "lat" : 12.943287,
-                        "lng" : 77.6913488
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "0.5 km",
-                        "value" : 520
-                     },
-                     "duration" : {
-                        "text" : "2 mins",
-                        "value" : 127
-                     },
-                     "end_location" : {
-                        "lat" : 12.9424168,
-                        "lng" : 77.6955543
-                     },
-                     "html_instructions" : "At the roundabout, take the \u003cb\u003e2nd\u003c/b\u003e exit\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e",
-                     "maneuver" : "roundabout-left",
-                     "polyline" : {
-                        "points" : "cx~mAqceyM?A?AAA?A?A?A?A?A@??A?A@A?A@??A@A@A@??ABA@?@A@?@?@?@?@?@?@?@??@@?DUFYm@]e@YW[u@]AAAA?A?A?ANi@DQ@A?A@A@ADC@AFGLO@A@C@AJg@L_ABg@@QAKAg@CYc@gB?[Ry@CEAA?AAC?AAA?A?C@C@GBA@CBAFA"
-                     },
-                     "start_location" : {
-                        "lat" : 12.9422594,
-                        "lng" : 77.6916111
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "0.1 km",
-                        "value" : 133
-                     },
-                     "duration" : {
-                        "text" : "1 min",
-                        "value" : 32
-                     },
-                     "end_location" : {
-                        "lat" : 12.9423575,
-                        "lng" : 77.6967724
-                     },
-                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e toward \u003cb\u003eService Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e",
-                     "maneuver" : "turn-left",
-                     "polyline" : {
-                        "points" : "cy~mAe|eyMJiB?I?ICkABi@"
-                     },
-                     "start_location" : {
-                        "lat" : 12.9424168,
-                        "lng" : 77.6955543
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "0.4 km",
-                        "value" : 411
-                     },
-                     "duration" : {
-                        "text" : "1 min",
-                        "value" : 74
-                     },
-                     "end_location" : {
-                        "lat" : 12.9457907,
-                        "lng" : 77.69813649999999
-                     },
-                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at JP Morgan onto \u003cb\u003eService Rd\u003c/b\u003e",
-                     "maneuver" : "turn-left",
-                     "polyline" : {
-                        "points" : "wx~mAycfyMgAi@YOg@UYKICOEOEMCOCKCaAW{A[k@OOESGsCq@OEMEKEIC"
-                     },
-                     "start_location" : {
-                        "lat" : 12.9423575,
-                        "lng" : 77.6967724
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "11 m",
-                        "value" : 11
-                     },
-                     "duration" : {
-                        "text" : "1 min",
-                        "value" : 2
-                     },
-                     "end_location" : {
-                        "lat" : 12.9457477,
-                        "lng" : 77.6982311
-                     },
-                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e toward \u003cb\u003eNH 44\u003c/b\u003e",
-                     "maneuver" : "turn-right",
-                     "polyline" : {
-                        "points" : "en_nAklfyMFQ"
-                     },
-                     "start_location" : {
-                        "lat" : 12.9457907,
-                        "lng" : 77.69813649999999
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "0.5 km",
-                        "value" : 483
-                     },
-                     "duration" : {
-                        "text" : "1 min",
-                        "value" : 49
-                     },
-                     "end_location" : {
-                        "lat" : 12.9499199,
-                        "lng" : 77.69942619999999
-                     },
-                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eNH 44\u003c/b\u003e",
-                     "maneuver" : "turn-left",
-                     "polyline" : {
-                        "points" : "}m_nA}lfyMkLsCCAQECAKCMCKAKCQCOCOCQCSCQCSCQAMCOAMA}@MoAO"
-                     },
-                     "start_location" : {
-                        "lat" : 12.9457477,
-                        "lng" : 77.6982311
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "29 m",
-                        "value" : 29
-                     },
-                     "duration" : {
-                        "text" : "1 min",
-                        "value" : 30
-                     },
-                     "end_location" : {
-                        "lat" : 12.9499761,
-                        "lng" : 77.69916169999999
-                     },
-                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
-                     "maneuver" : "turn-left",
-                     "polyline" : {
-                        "points" : "_h`nAmtfyMCPGb@"
-                     },
-                     "start_location" : {
-                        "lat" : 12.9499199,
-                        "lng" : 77.69942619999999
-                     },
-                     "travel_mode" : "DRIVING"
-                  }
-               ],
-               "traffic_speed_entry" : [],
-               "via_waypoint" : []
-            }
-         ],
-         "overview_polyline" : {
-            "points" : "u}~mAy}dyMi@kACK?GL]BEtA?RPbBeA?CAC?GFKJGL?@@FUFYm@]e@YW[u@]AAACXeAPORWXgBDy@Cs@CYc@gB?[Ry@EGAG?KJOFAJiB?SCkABi@aBy@aAa@YIy@QyEiAeEeAUIFQkLsCUGOEw@MeAOqFo@Kt@"
-         },
-         "summary" : "NH 44",
-         "warnings" : [],
-         "waypoint_order" : []
-      }
-   ],
-   "status" : "OK"
-}
+    "geocoded_waypoints" : [
+       {
+          "geocoder_status" : "OK",
+          "place_id" : "ChIJHzOaMthv5kcRKWPBdKjdNao",
+          "types" : [ "establishment", "lodging", "point_of_interest" ]
+       },
+       {
+          "geocoder_status" : "OK",
+          "place_id" : "ChIJKWLknLVv5kcRFBsXlH-tSEs",
+          "types" : [ "establishment", "place_of_worship", "point_of_interest" ]
+       }
+    ],
+    "routes" : [
+       {
+          "bounds" : {
+             "northeast" : {
+                "lat" : 48.8807542,
+                "lng" : 2.3207982
+             },
+             "southwest" : {
+                "lat" : 48.8593279,
+                "lng" : 2.3101293
+             }
+          },
+          "copyrights" : "Map data ©2018 Google",
+          "legs" : [
+             {
+                "distance" : {
+                   "text" : "3.5 km",
+                   "value" : 3521
+                },
+                "duration" : {
+                   "text" : "13 mins",
+                   "value" : 787
+                },
+                "end_address" : "37 Rue du Rocher, 75008 Paris, France",
+                "end_location" : {
+                   "lat" : 48.87759699999999,
+                   "lng" : 2.3207982
+                },
+                "start_address" : "35 Boulevard de la Tour-Maubourg, 75007 Paris, France",
+                "start_location" : {
+                   "lat" : 48.8593279,
+                   "lng" : 2.3101293
+                },
+                "steps" : [
+                   {
+                      "distance" : {
+                         "text" : "0.4 km",
+                         "value" : 366
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 81
+                      },
+                      "end_location" : {
+                         "lat" : 48.8626108,
+                         "lng" : 2.310441
+                      },
+                      "html_instructions" : "Head \u003cb\u003enorth\u003c/b\u003e on \u003cb\u003eBoulevard de la Tour-Maubourg\u003c/b\u003e toward \u003cb\u003eRue Saint-Dominique\u003c/b\u003e",
+                      "polyline" : {
+                         "points" : "yyeiHiebMmAGk@AkFWg@CoBIkBKe@A"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8593279,
+                         "lng" : 2.3101293
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.3 km",
+                         "value" : 257
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 55
+                      },
+                      "end_location" : {
+                         "lat" : 48.8649221,
+                         "lng" : 2.3103194
+                      },
+                      "html_instructions" : "Continue onto \u003cb\u003ePont des Invalides\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eParts of this road may be closed at certain times or days\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eTurn may not be allowed at certain times or days\u003c/div\u003e",
+                      "polyline" : {
+                         "points" : "infiHggbMc@@Q?iADgADaA@q@?O?I?E?Y@[@{@B"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8626108,
+                         "lng" : 2.310441
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.4 km",
+                         "value" : 434
+                      },
+                      "duration" : {
+                         "text" : "2 mins",
+                         "value" : 106
+                      },
+                      "end_location" : {
+                         "lat" : 48.86882259999999,
+                         "lng" : 2.3101362
+                      },
+                      "html_instructions" : "Slight \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eAvenue Franklin Delano Roosevelt\u003c/b\u003e",
+                      "maneuver" : "turn-slight-right",
+                      "polyline" : {
+                         "points" : "w|fiHofbMICK?KAoABaCFE?E?qADm@?eAH_CBq@@[@O?U@qAB"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8649221,
+                         "lng" : 2.3103194
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.6 km",
+                         "value" : 566
+                      },
+                      "duration" : {
+                         "text" : "2 mins",
+                         "value" : 133
+                      },
+                      "end_location" : {
+                         "lat" : 48.87260269999999,
+                         "lng" : 2.3147553
+                      },
+                      "html_instructions" : "At the roundabout, take the \u003cb\u003e2nd\u003c/b\u003e exit onto \u003cb\u003eAvenue Matignon\u003c/b\u003e",
+                      "maneuver" : "roundabout-right",
+                      "polyline" : {
+                         "points" : "cugiHkebM?G?C?C?CAC?AAC?AAAAAACCCCAGCAAA?AAA?A?A?A@A?A@A?A@?@A@CFS_@a@cAKYs@aBs@eBGQSq@O]a@aAO[Ym@GICEEEGEII_Au@SQ[U_Ao@UQKIYO]Ug@YeAs@"
+                      },
+                      "start_location" : {
+                         "lat" : 48.86882259999999,
+                         "lng" : 2.3101362
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.1 km",
+                         "value" : 123
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 30
+                      },
+                      "end_location" : {
+                         "lat" : 48.87368379999999,
+                         "lng" : 2.3144776
+                      },
+                      "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eAvenue Delcassé\u003c/b\u003e",
+                      "maneuver" : "turn-slight-left",
+                      "polyline" : {
+                         "points" : "wlhiHgbcMICI?E?E?YFwBh@e@H"
+                      },
+                      "start_location" : {
+                         "lat" : 48.87260269999999,
+                         "lng" : 2.3147553
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.2 km",
+                         "value" : 174
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 49
+                      },
+                      "end_location" : {
+                         "lat" : 48.87524459999999,
+                         "lng" : 2.3144061
+                      },
+                      "html_instructions" : "Continue onto \u003cb\u003eAvenue Percier\u003c/b\u003e",
+                      "polyline" : {
+                         "points" : "oshiHo`cMqFPeAC"
+                      },
+                      "start_location" : {
+                         "lat" : 48.87368379999999,
+                         "lng" : 2.3144776
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.4 km",
+                         "value" : 408
+                      },
+                      "duration" : {
+                         "text" : "2 mins",
+                         "value" : 95
+                      },
+                      "end_location" : {
+                         "lat" : 48.8748353,
+                         "lng" : 2.319894
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eBoulevard Haussmann\u003c/b\u003e",
+                      "maneuver" : "turn-right",
+                      "polyline" : {
+                         "points" : "g}hiHa`cMCiAK}C@m@PqABY?Yp@qKZyDAq@A[AQ"
+                      },
+                      "start_location" : {
+                         "lat" : 48.87524459999999,
+                         "lng" : 2.3144061
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "25 m",
+                         "value" : 25
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 6
+                      },
+                      "end_location" : {
+                         "lat" : 48.8750325,
+                         "lng" : 2.3197184
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eBoulevard Malesherbes\u003c/b\u003e/\u003cb\u003ePlace Saint-Augustin\u003c/b\u003e",
+                      "maneuver" : "turn-left",
+                      "polyline" : {
+                         "points" : "wzhiHibdMe@`@"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8748353,
+                         "lng" : 2.319894
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "74 m",
+                         "value" : 74
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 17
+                      },
+                      "end_location" : {
+                         "lat" : 48.8756822,
+                         "lng" : 2.3196154
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003ePlace Saint-Augustin\u003c/b\u003e",
+                      "maneuver" : "turn-right",
+                      "polyline" : {
+                         "points" : "}{hiHgadMMIC?]BM@cAV"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8750325,
+                         "lng" : 2.3197184
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.1 km",
+                         "value" : 117
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 21
+                      },
+                      "end_location" : {
+                         "lat" : 48.8767164,
+                         "lng" : 2.3193089
+                      },
+                      "html_instructions" : "Continue straight onto \u003cb\u003eAvenue César Caire\u003c/b\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : {
+                         "points" : "_`iiHs`dMaB\\sAVYF"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8756822,
+                         "lng" : 2.3196154
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "19 m",
+                         "value" : 19
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 5
+                      },
+                      "end_location" : {
+                         "lat" : 48.8767079,
+                         "lng" : 2.3190509
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eRue de la Bienfaisance\u003c/b\u003e",
+                      "maneuver" : "turn-left",
+                      "polyline" : {
+                         "points" : "ofiiHu~cM@r@"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8767164,
+                         "lng" : 2.3193089
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.5 km",
+                         "value" : 459
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 82
+                      },
+                      "end_location" : {
+                         "lat" : 48.8804773,
+                         "lng" : 2.3164858
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eRue du Général Foy\u003c/b\u003e",
+                      "maneuver" : "turn-right",
+                      "polyline" : {
+                         "points" : "mfiiHa}cMiFlDkHbE{ElC"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8767079,
+                         "lng" : 2.3190509
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "52 m",
+                         "value" : 52
+                      },
+                      "duration" : {
+                         "text" : "1 min",
+                         "value" : 14
+                      },
+                      "end_location" : {
+                         "lat" : 48.8807542,
+                         "lng" : 2.317053
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eRue de Monceau\u003c/b\u003e",
+                      "maneuver" : "turn-right",
+                      "polyline" : {
+                         "points" : "_~iiHamcM_@{@CIQi@"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8804773,
+                         "lng" : 2.3164858
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : {
+                         "text" : "0.4 km",
+                         "value" : 447
+                      },
+                      "duration" : {
+                         "text" : "2 mins",
+                         "value" : 93
+                      },
+                      "end_location" : {
+                         "lat" : 48.87759699999999,
+                         "lng" : 2.3207982
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eRue du Rocher\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                      "maneuver" : "turn-right",
+                      "polyline" : {
+                         "points" : "u_jiHqpcMbAaAzCsCRULQZ]\\c@pAiBrAqBPYPYb@o@`@m@P[FKLS@C"
+                      },
+                      "start_location" : {
+                         "lat" : 48.8807542,
+                         "lng" : 2.317053
+                      },
+                      "travel_mode" : "DRIVING"
+                   }
+                ],
+                "traffic_speed_entry" : [],
+                "via_waypoint" : []
+             }
+          ],
+          "overview_polyline" : {
+             "points" : "yyeiHiebMmKe@{EUiA?{ADiCFkA?wBFUC{A@_FLsBHqDDsCF?SCKIKUIMHCFS_@m@}AgBgE[cA{AiDY[yBgB{B{AuCgBO?_@F}Cr@qFPeACOgF@m@PqABs@lAkQCmAAQe@`@QIk@DeDt@mB^@r@iFlDgOpIc@eAQi@bAaAnDiDh@o@nBmCdBkChBsCVc@"
+          },
+          "summary" : "Avenue Matignon",
+          "warnings" : [],
+          "waypoint_order" : []
+       }
+    ],
+    "status" : "OK"
+ }
+ 

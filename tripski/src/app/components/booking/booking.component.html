@@ -1,13 +1,13 @@
 <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Best Western Hotel</mat-card-title>
-      <mat-card-subtitle>5* Hotel</mat-card-subtitle>
+      <mat-card-title>Eiffel Tower</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="/assets/Icons/SightSeeing/arc.jpg" alt="Hotel">
+    <img mat-card-image src="/assets/Icons/SightSeeing/Capture.PNG" alt="Hotel">
     <mat-card-content>
       <p>
-  
+     Champ de Mars, 5 Avenue Anatole France, France
       </p>
     </mat-card-content>
   
@@ -15,18 +15,20 @@
 <br><br>
 <div class="row">
 <mat-form-field>
+  
     <input matInput [matDatepicker]="picker" placeholder="Choose a date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker><br><br>
-  
 
-      <div>
+<br>
+      <div>No. of Seats
         <mat-select [(ngModel)]="selected2" placeholder="Adults No.">
           <mat-option *ngFor="let option of options2" [value]="option.id">{{ option.name }}</mat-option>
         </mat-select>
       </div>
   
-        
+    
+  
     
   </mat-form-field>
   

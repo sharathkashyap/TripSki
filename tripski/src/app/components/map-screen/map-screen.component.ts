@@ -87,7 +87,8 @@ export class MapScreenComponent implements OnInit {
 
   private fetchFourSquareImages(venueId,venue) {
     var version="20180802"
-    /*this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));*/
+    //this.httpRet.get("https://api.foursquare.com/v2/venues/"+venueId+"/photos?client_id="+this.CLIENT_ID+"&client_secret="+this.CLIENT_SECRET+"&v="+
+    //version).subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));
      this.httpRet.get("/assets/results/photo.json").subscribe((photoListToDisplay:Object) => this.processImageList(photoListToDisplay,venueId,venue));
   }
 
@@ -99,7 +100,7 @@ export class MapScreenComponent implements OnInit {
   private convertVenueToGeoJson(venue,photoResponse) {
     var location = venue.location;
     var category = venue.categories[0];
-    var imgSrc = photoResponse.response.photos.count > 0?photoResponse.response.photos.items[0].prefix+"100"+photoResponse.response.photos.items[0].suffix:category.icon.prefix+"64"+category.icon.suffix;
+    var imgSrc = photoResponse.response.photos.count > 0?photoResponse.response.photos.items[0].prefix+"250"+photoResponse.response.photos.items[0].suffix:category.icon.prefix+"64"+category.icon.suffix;
     if(location.lat!=null && location.lng!=null) {
 
       var geojsonFeature = {
